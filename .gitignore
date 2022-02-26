@@ -1,6 +1,16 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/vs
-# Edit at https://www.toptal.com/developers/gitignore?templates=vs
+# Created by https://www.toptal.com/developers/gitignore/api/vs,netbeans
+# Edit at https://www.toptal.com/developers/gitignore?templates=vs,netbeans
+
+### NetBeans ###
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 
 ### vs ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -357,4 +367,4 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-# End of https://www.toptal.com/developers/gitignore/api/vs
+# End of https://www.toptal.com/developers/gitignore/api/vs,netbeans
