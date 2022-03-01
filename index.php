@@ -1,17 +1,12 @@
 <?php require('components/head.inc.php');
       require('components/navbar.inc.php');
 ?>
+<body>
     <header class="page-header gradient">
       <div class="container pt-3">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-5">
             <h2>Build website using MDB</h2>
-
-            <p>
-              It's crafted with the latest trend of design & coded with all
-              modern approaches. It's a robust & multi-dimensional usable
-              template.
-            </p>
 
             <button type="button" class="btn btn-outline-success btn-lg">
               Read more
@@ -350,6 +345,8 @@
         </div>
       </div>
     </section>
- </body>
+<script src="js/bootstrap.min.js"></script>
+</body>
+<?php require('components/footer.inc.php'); ?>
 
 
