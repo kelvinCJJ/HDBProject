@@ -1,6 +1,7 @@
 <?php
 require('components/head.inc.php');
 require('components/navbar.inc.php');
+?>
 
 <h1>Build To Order flats(BTO)</h1>
 
