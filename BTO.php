@@ -1,19 +1,7 @@
 <?php
 require('components/head.inc.php');
 require('components/navbar.inc.php');
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
- */
-?>
-<!DOCTYPE html>
-<html lang="en">
-<meta charset ="UTF-8">
-<link href="style.css" rel="stylesheet" type="text/css"/>
 
-
-<body>
-   
 <h1>Build To Order flats(BTO)</h1>
 
 	<ul class="image-list-small">
@@ -85,6 +73,5 @@ require('components/navbar.inc.php');
     </li>
 </ul>
 </body>
-	
-</html>
+<script src="js/bootstrap.min.js"></script>	
 <?php require('components/footer.inc.php'); ?>
