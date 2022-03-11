@@ -8,8 +8,7 @@ require('components/navbar.inc.php');
 	<ul class="image-list-small">
     <li>
 	<p class="btoname"><strong>Newton Circle(June 2021)</strong>
-            <a href="resale1.php">
-      <img src="img/bto1.jpg">
+      <img src="img/resale1.jpg">
             </a>
       <div class="details">
         <p class="minsell">Minimum Selling Price:</p>
