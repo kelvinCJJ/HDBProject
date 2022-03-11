@@ -7,7 +7,6 @@ require('components/navbar.inc.php');
 
 	<ul class="image-list-small">
     <li>
-<<<<<<< HEAD
 	<p class="btoname"><strong>Newton Circle(June 2021)</strong>
             <a href="resale1.php">
       <img src="img/bto1.jpg">
