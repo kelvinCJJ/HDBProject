@@ -7,6 +7,7 @@ require('components/navbar.inc.php');
 
 	<ul class="image-list-small">
     <li>
+<<<<<<< HEAD
 	<p class="btoname"><strong>Newton(June 2021)</strong>
             <a href="resale1.php">
       <img src="img/bto1.jpg">
@@ -68,8 +69,8 @@ require('components/navbar.inc.php');
 	<p class="btoname"><strong>Buangkok(March 2021)</strong>
       <img src="img/resale8.jpg"/>
       <div class="details">
-      <p class="minsell">Minimum Selling Price:</p>
-      <p class="maxsell">Maximum Selling Price:</p>
+        <p class="minsell">Minimum Selling Price:</p>
+        <p class="maxsell">Maximum Selling Price:</p>
       </div>
     </li>
 </ul>
