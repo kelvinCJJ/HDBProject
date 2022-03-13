@@ -6,12 +6,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Created on : 28 Feb 2022, 10:00:27 pm
     Author     : kelvin
 */
-body{
+/*body{
 	font-family: "Verdana", Sans-serif;
 	background-image: url('img/btobg.jpg');
     background-size:100% 100%;
-	width = 100; /*Background cant work*/
-}/*auto align container to center of page*/
+	width = 100; Background cant work
+}auto align container to center of page*/
 .image-list-small {
   font-family: Arial, Helvetica, sans-serif;
   margin:  auto;
