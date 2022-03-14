@@ -1,5 +1,8 @@
 <?php require('components/head.inc.php');
       require('components/navbar.inc.php');
+      require('config.php');
+      
+      
 ?>
 <body>
     <header class="page-header gradient">

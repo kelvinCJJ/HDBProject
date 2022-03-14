@@ -6,6 +6,7 @@
     <title>HomeGuru</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
