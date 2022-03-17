@@ -1,0 +1,70 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 28 Feb 2022, 10:00:27 pm
+    Author     : kelvin
+*/
+/*body{
+	font-family: "Verdana", Sans-serif;
+	background-image: url('img/btobg.jpg');
+    background-size:100% 100%;
+	width = 100; Background cant work
+}auto align container to center of page*/
+.image-list-small {
+  font-family: Arial, Helvetica, sans-serif;
+  margin:  auto;
+  text-align: center;
+  max-width: 1200px;
+  padding: 0;
+}
+/*Display list of item side by side , can inc/dec margin value for gap */
+.image-list-small li {
+  display: inline-block;
+  width: 150px;
+  margin: 10px 70px 20px;
+}
+/*Target "a" element and display as a block, define background size with cover value*/
+.image-list-small li > a {
+  display: block;
+  text-decoration: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 137px;
+  margin: 0;
+  padding: 0;
+  border: 4px solid #ffffff;
+  outline: 1px solid #d0d0d0;
+  box-shadow: 0 2px 1px #DDD;
+  transition: .25s;
+}
+.image-list-small li img{
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+}
+.image-list-small li > a:hover{
+    transform: scale(1.1);
+    transition: .25s;
+}
+.image-list-small .details .minsell {
+  display: block;
+  color: #717171;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+.image-list-small .details .maxsell {
+  display: block;
+  color: #717171;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1{
+	text-align:center;
+}
+
+
