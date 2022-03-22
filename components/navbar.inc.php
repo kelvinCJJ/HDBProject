@@ -9,7 +9,7 @@ if (isset($_SESSION['username']))
 if (isset($_GET['logout'])) {
     unset($username);
     session_destroy();
-    header('location:index.php');
+    header('location:home.php');
 }
 ?>
 <header class="navbar navbar-expand-lg navbar-light bg-light">
