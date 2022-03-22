@@ -1,7 +1,35 @@
 <?php
 require('components/head.inc.php');
 require('components/navbar.inc.php');
+require('config.php');
+
+ $select = mysqli_query($conn, "SELECT * FROM bto")
+            or die($conn->error);
+
+    if (mysqli_num_rows($select) > 0) {
+        $row = mysqli_fetch_array($select, MYSQLI_NUM);
+        printf ("%s (%s)\n", $row[0], $row[1]);
+    } else {
+        echo 'error';
+    }
+
 ?>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <?php
+    foreach($row as $data)
+    {
+        echo "<div class='col'>
+    <div class='card h-100'>
+      <img src='".$row[5]."' class='card-img-top' alt=''>
+      <div class='card-body'>
+        <h5 class='card-title'>$row[1]</h5>
+        <p class='card-text'>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>";
+    }
+    ?>
+</div>
 
 <h1>Build To Order flats(BTO)</h1>
 
