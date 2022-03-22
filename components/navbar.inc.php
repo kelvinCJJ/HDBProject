@@ -40,6 +40,7 @@ if (isset($_GET['logout'])) {
                 echo "<div >               
                 <i class=' bi bi-person-circle'></i>
                 <span class='navbar-light'> " . $username . " </span>
+                
                 <a href='home.php?logout=". $username."?' class='ms-2 btn btn-secondary'><i class='bi bi-box-arrow-right'></i> Sign out</a></li>                
                 </div>";
             }
