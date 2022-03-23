@@ -22,7 +22,9 @@ $select = mysqli_query($conn, "SELECT * FROM resale")
       <img src='".$data[9]."' class='card-img-top' alt=''>
       <div class='card-body'>
         <h5 class='card-title'>".$data[1]."</h5>
-        <p class='card-text'>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class='card-text'>This is a resale unit located in ".$data[1]." with a resale price of ".$data[2].".</p>
+        <p class='card-text'>This resale unit was published on ".$data[3].".</p>
+        <p class='card-text'>It is a ".$data[4]." unit.</p>
       </div>
     </div>
   </div>";
@@ -92,7 +94,7 @@ $select = mysqli_query($conn, "SELECT * FROM resale")
     </li>
 	<li>
 	<p class="btoname"><strong>Buangkok(March 2021)</strong>
-      <img src="img/resale/resale8.jpg"/>
+      <img src="img/resale/resale9.jpg"/>
       <div class="details">
         <p class="minsell">Minimum Selling Price:</p>
         <p class="maxsell">Maximum Selling Price:</p>
