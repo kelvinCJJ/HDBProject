@@ -9,7 +9,7 @@ if (isset($_SESSION['username']))
 if (isset($_GET['logout'])) {
     unset($username);
     session_destroy();
-    header('location:home.php');
+    header('location:index.php');
 }
 ?>
 <header class="navbar navbar-expand-lg navbar-light bg-light">
@@ -41,7 +41,7 @@ if (isset($_GET['logout'])) {
                 <i class=' bi bi-person-circle'></i>
                 <span class='navbar-light'> " . $username . " </span>
                 
-                <a href='home.php?logout=". $username."?' class='ms-2 btn btn-secondary'><i class='bi bi-box-arrow-right'></i> Sign out</a></li>                
+                <a href='index.php?logout=". $username."?' class='ms-2 btn btn-secondary'><i class='bi bi-box-arrow-right'></i> Sign out</a></li>                
                 </div>";
             }
             ?>
