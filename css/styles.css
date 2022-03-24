@@ -62,9 +62,40 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
   font-weight: normal;
   margin: 0;
 }
-
+/*House detail*/
+.housetitle{
+padding: 0 35%;
+}
+.bto_pic{
+    display:grid;
+    grid-gap:10px;  
+    grid-template-areas: 'satu satu . .' 'satu satu . .';
+    margin:20px 0;
+  
+}
+.bto_pic div img{
+    width:100%;
+    display:block; 
+    border-radius:10px;
+}
+.bto_pic1{
+    grid-area: satu;
+}
 h1{
 	text-align:center;
+}
+.extra-info{
+    text-align:center;
+    font-size:20px;
+}
+/*Line across the page*/
+.line{
+    border:0;
+    height: 1px;
+    background: black;
+    width:100%;
+    max-width:1500px;
+    margin:20px 0 50px;
 }
 
 /* Home page 
