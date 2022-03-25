@@ -12,14 +12,17 @@ require('config.php');
         echo 'error';
     }
 ?>
-
+<head>
+        <script src="https://kit.fontawesome.com/dba75d4267.js" crossorigin="anonymous">
+        </script>
+    </head>
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <?php
     foreach($row as $data)
     {
         echo "<div class='col'>
     <div class='card h-100'>
-    <a href=/BTO1>
+    <a href=/BTO1.php>
       <img src='".$data[5]."' class='card-img-top' alt=''>
       <div class='card-body'>
         <h5 class='card-title'>".$data[1]."</h5>
@@ -45,7 +48,7 @@ require('config.php');
       </div>
     </li>
     <li>
-	<p class="btoname"><strong>Jurong West(July 2023)</strong>
+	<p class="btoname"><strong>Jurong West(July 2023)</strong>   
     <img src="img/bto/bto2.jpg"/>
       <div class="details">
         <p class="minsell">Minimum Selling Price:</p>
