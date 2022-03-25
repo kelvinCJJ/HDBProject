@@ -12,95 +12,29 @@ $select = mysqli_query($conn, "SELECT * FROM resale")
         echo 'error';
     }
 ?>
-
+<div class="container">
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <?php
     foreach($row as $data)
     {
-        echo "<div class='col'>
+    echo "<div class='col'>
     <div class='card h-100'>
       <img src='".$data[9]."' class='card-img-top' alt=''>
       <div class='card-body'>
         <h5 class='card-title'>".$data[1]."</h5>
-        <p class='card-text'>This is a resale unit located in ".$data[1]." with a resale price of ".$data[2].".</p>
-        <p class='card-text'>This resale unit was published on ".$data[3].".</p>
-        <p class='card-text'>It is a ".$data[4]." unit.</p>
+        <p class='card-text'>".$data[6].
+            "<br>".$data[2].
+            "<br>".$data[4]." unit</p>
+        <div class='card-footer'><</div>
       </div>
     </div>
   </div>";
     }
     ?>
 </div>
+    </div>
 
-<h1>Resale Flats</h1>
 
-	<ul class="image-list-small">
-    <li>
-	<p class="btoname"><strong>Newton Circle(June 2021)</strong>
-      <img src="img/resale/resale1.jpg">
-            </a>
-      <div class="details">
-        <p class="minsell">Minimum Selling Price:</p>
-        <p class="maxsell">Maximum Selling Price:</p>
-      </div>
-    </li>
-    <li>
-	<p class="btoname"><strong>Jurong East(July 2021)</strong>
-    <img src="img/resale/resale2.jpg"/>
-      <div class="details">
-        <p class="minsell">Minimum Selling Price:</p>
-        <p class="maxsell">Maximum Selling Price:</p>
-      </div>
-    </li>
-    <li>
-	<p class="btoname"><strong>Yishun Ring(August 2021)</strong>
-      <img src="img/resale/resale3.jpg"/>
-      <div class="details">
-        <p class="minsell">Minimum Selling Price:</p>
-        <p class="maxsell">Maximum Selling Price:</p>
-      </div>
-    </li>
-    <li>
-	<p class="btoname"><strong>Commonwealth(January 2021)</strong>
-      <img src="img/resale/resale4.jpg"/>
-      <div class="details">
-        <p class="minsell">Minimum Selling Price:</p>
-        <p class="maxsell">Maximum Selling Price:</p>
-      </div>
-    </li>
-    <li>
-	<p class="btoname"><strong>Geylang Bahru(December 2021)</strong>
-      <img src="img/resale/resale5.jpg"/>
-      <div class="details">
-        <p class="minsell">Minimum Selling Price:</p>
-        <p class="maxsell">Maximum Selling Price:</p>
-      </div>
-    </li>
-    <li>
-	<p class="btoname"><strong>Bukit Batok(February 2021)</strong>
-      <img src="img/resale/resale6.jpg"/>
-      <div class="details">
-      <p class="minsell">Minimum Selling Price:</p>
-      <p class="maxsell">Maximum Selling Price:</p>
-      </div>
-    </li>
-	<li>
-	<p class="btoname"><strong>Bradell(June 2021)</strong>
-      <img src="img/resale/resale7.jpg"/>
-      <div class="details">
-      <p class="minsell">Minimum Selling Price:</p>
-      <p class="maxsell">Maximum Selling Price:</p>
-      </div>
-    </li>
-	<li>
-	<p class="btoname"><strong>Buangkok(March 2021)</strong>
-      <img src="img/resale/resale9.jpg"/>
-      <div class="details">
-        <p class="minsell">Minimum Selling Price:</p>
-        <p class="maxsell">Maximum Selling Price:</p>
-      </div>
-    </li>
-</ul>
 </body>
 <script src="js/bootstrap.min.js"></script>	
 <?php require('components/footer.inc.php'); ?>
