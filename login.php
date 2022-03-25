@@ -3,7 +3,6 @@ require('components/head.inc.php');
 require('components/navbar.inc.php');
 require('config.php');
 
-
 if (isset($_POST['submit'])) {
 
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -15,7 +14,7 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($select) > 0) {
         $row = mysqli_fetch_assoc($select);
         $_SESSION['username'] = $row['Username'];
-        header('location:home.php');
+        header('location:index.php');
     } else {
         $message = 'Invalid email or password';
     }
@@ -27,7 +26,7 @@ if (isset($_POST['submit'])) {
             <div class="text-center my-5">
                 <img src="/img/logo.png" alt="logo" width="100">
             </div>
-            <div class="card shadow-lg">
+            <div class="card my-5 shadow-lg">
                 <div class="card-body p-5">
                     <h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
                     <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
@@ -57,10 +56,10 @@ if (isset($_POST['submit'])) {
                         </div>
 
                         <div class="d-flex align-items-center">
-                            <div class="form-check">
+<!--                            <div class="form-check">
                                 <input type="checkbox" name="remember" id="remember" class="form-check-input">
                                 <label for="remember" class="form-check-label">Remember Me</label>
-                            </div>
+                            </div>-->
                             <button name="submit" type="submit" class="btn btn-primary ms-auto">
                                 Login
                             </button>
@@ -76,7 +75,7 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 </section>
-<script>
+<!--<script>
     (function () {
 
         var forms = document.querySelectorAll('.needs-validation')
@@ -94,7 +93,7 @@ if (isset($_POST['submit'])) {
                     }, false)
                 })
     })()
-</script>
+</script>-->
 <script src="js/bootstrap.min.js"></script>
 </body>
 <?php require('components/footer.inc.php'); ?>
