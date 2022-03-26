@@ -1,6 +1,24 @@
 <?php
 require('components/head.inc.php');
 require('components/navbar.inc.php');
+require('config.php');
+
+ $select = mysqli_query($conn, "SELECT * FROM bto LIMIT 4")
+            or die($conn->error);
+
+    if (mysqli_num_rows($select) > 0) {
+        $row = mysqli_fetch_all($select);
+    } else {
+        echo 'error';
+    }
+    $select = mysqli_query($conn, "SELECT * FROM resale  LIMIT 4")
+            or die($conn->error);
+
+    if (mysqli_num_rows($select) > 0) {
+        $row = mysqli_fetch_all($select);
+    } else {
+        echo 'error';
+    }
 ?>
 
 <h1>HomeGURU</h1><!<!-- What is the font used for homeguru  -->
@@ -19,41 +37,24 @@ require('components/navbar.inc.php');
 <h2>Available BTO </h2>
 <p style = "text-align: right"><a href="bto.php"> View More > </a></p>
 <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/bto1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Serangoon <br>(June 2025)</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ <?php
+    foreach($row as $data)
+    {
+        echo "<div class='col'>
+      <div class='card shadow-lg h-100'>
+      <img src='".$data[5]."' class='card-img-top' alt=''>
+      <div class='card-body'>
+        <h5 class='card-title'>".$data[1]."<a href='/BTO1.php?btoid=".$data[0]."' class='btn  btn-danger float-end'>Read more</a></h5>
+        <p class='card-text'>
+        <h6>Available room types:</h6><p>".$data[4].
+        "</p><h6>No. of units available</h6><p>".$data[3]."
+        </p></p>
+        
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/bto2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Jurong West <br>(July 2023)</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/bto3.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Yishun<br> (August 2024)</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/bto4.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Queenstown <br>(January 2026)</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
+  </div>";
+    }
+    ?>
   </div>
 </div>
 
@@ -61,45 +62,26 @@ require('components/navbar.inc.php');
 <p style = "text-align: right"><a href="resale.php"> View More > </a></p>
 
 <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/resale1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Newton Circle<br>(June 2021)</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
+    <?php
+    foreach($row as $data)
+    {
+    echo "<div class='col'>
+    <div class='card shadow-lg h-100'>
+      <img src='".$data[9]."' class='card-img-top' alt=''>
+      <div class='card-body'>
+        <h5 class='card-title'>".$data[1]." (".$data[4].")
+            <a href='/resaledetails.php?resaleid=".$data[0]."' class='btn btn-danger float-end'>Read more</a>
+                </h5>
+        <p class='card-text'>".$data[6].
+            "<br>S$".$data[2].
+            "<br></p>
+        </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/resale2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Jurong East<br>(July 2021)</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/resale3.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Yishun Ring<br> (August 2021)</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/resale4.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Commonwealth <br>(January 2021)</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
+  </div>";
+    }
+    ?>
   </div>
 </div>
-<h2>Our Mission</h2>
-<p> Find your dream home with us, discover new properties for sale in Singapore. </p>
 
 <h2>Our Team </h2>
 <ul class="image-list-small">
