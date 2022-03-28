@@ -33,7 +33,7 @@ require('config.php');
 </div>
 
 
-<div>
+<div class ="container">
 <h2>Available BTO </h2>
 <p style = "text-align: right"><a href="bto.php"> View More > </a></p>
 <div class="row row-cols-1 row-cols-md-4 g-4">
@@ -56,11 +56,11 @@ require('config.php');
     }
     ?>
   </div>
-</div>
+
 
 <h2>Available Resale </h2>
 <p style = "text-align: right"><a href="resale.php"> View More > </a></p>
-
+<div class ="container">
 <div class="row row-cols-1 row-cols-md-4 g-4">
     <?php
     foreach($row as $data)
@@ -110,6 +110,8 @@ require('config.php');
     <img src="img/kai-seidler.jpg"/>
     </li>
 </ul>
+</div>
+
 </body>
 <script src="js/bootstrap.min.js"></script>	
 <?php require('components/footer.inc.php'); ?>
