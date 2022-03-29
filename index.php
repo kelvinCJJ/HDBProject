@@ -4,16 +4,8 @@ require('components/navbar.inc.php');
 require('config.php');
 ?>
 
-<h1>HomeGURU</h1><!<!-- What is the font used for homeguru  -->
+<h1>HomeGURU</h1>
 
-<div class="search_wrap search_wrap_6 ">
-<div class="search_box">
-<input type="text" class="input" placeholder="search...">
-<div class="btn">
-<p>Search</p>
-</div>
-</div>
-</div>
 
 
 <div class ="container">
