@@ -2,23 +2,6 @@
 require('components/head.inc.php');
 require('components/navbar.inc.php');
 require('config.php');
-
- $select = mysqli_query($conn, "SELECT * FROM bto LIMIT 4")
-            or die($conn->error);
-
-    if (mysqli_num_rows($select) > 0) {
-        $row = mysqli_fetch_all($select);
-    } else {
-        echo 'error';
-    }
-    $select = mysqli_query($conn, "SELECT * FROM resale  LIMIT 4")
-            or die($conn->error);
-
-    if (mysqli_num_rows($select) > 0) {
-        $row = mysqli_fetch_all($select);
-    } else {
-        echo 'error';
-    }
 ?>
 
 <h1>HomeGURU</h1><!<!-- What is the font used for homeguru  -->
@@ -34,10 +17,22 @@ require('config.php');
 
 
 <div class ="container">
-<h2>Available BTO </h2>
+<?php
+
+ $select = mysqli_query($conn, "SELECT * FROM bto  LIMIT 4")
+            or die($conn->error);
+
+    if (mysqli_num_rows($select) > 0) {
+        $row = mysqli_fetch_all($select);
+    } else {
+        echo 'error';
+    }
+?>
+<div class="container">
+  <h2>Available BTO </h2>
 <p style = "text-align: right"><a href="bto.php"> View More > </a></p>
 <div class="row row-cols-1 row-cols-md-4 g-4">
- <?php
+    <?php
     foreach($row as $data)
     {
         echo "<div class='col'>
@@ -55,13 +50,26 @@ require('config.php');
   </div>";
     }
     ?>
-  </div>
+</div>
+<?php
+     $select = mysqli_query($conn, "SELECT * FROM resale  LIMIT 4")
+            or die($conn->error);
 
+    if (mysqli_num_rows($select) > 0) {
+        $row = mysqli_fetch_all($select);
+    } else {
+        echo 'error';
+    }
+
+?>
+<br>
 
 <h2>Available Resale </h2>
 <p style = "text-align: right"><a href="resale.php"> View More > </a></p>
 <div class ="container">
 <div class="row row-cols-1 row-cols-md-4 g-4">
+
+    
     <?php
     foreach($row as $data)
     {
@@ -82,7 +90,7 @@ require('config.php');
     ?>
   </div>
 </div>
-
+<br>
 <h2>Our Team </h2>
 <ul class="image-list-small">
     <li>
