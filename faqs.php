@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     $message = mysqli_real_escape_string($conn, ($_POST['message']));
     
 
-    mysqli_query($conn, "INSERT INTO contactform(Name,Email,Phone,Call,Area,Message) VALUES('$name','$email','$phone','$call','$area','$message')")
+    mysqli_query($conn, "INSERT INTO contactform(Name,Email,Phone,Request,Area,Message) VALUES('$name','$email','$phone','$call','$area','$message')")
                 or die('query error');
         $note[] = 'Thank you! We will be in contact with you shortly.';
         echo $area;
