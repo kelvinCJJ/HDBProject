@@ -14,11 +14,13 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($select) > 0) {
         $row = mysqli_fetch_assoc($select);
         $_SESSION['username'] = $row['Username'];
+        $_SESSION['userid'] = $row['UserId'];
         header('location:index.php');
     } else {
         $message = 'Invalid email or password';
     }
 }
+
 ?>
 <section class="h-100">
     <div class="row justify-content-sm-center h-100">
@@ -56,10 +58,6 @@ if (isset($_POST['submit'])) {
                         </div>
 
                         <div class="d-flex align-items-center">
-<!--                            <div class="form-check">
-                                <input type="checkbox" name="remember" id="remember" class="form-check-input">
-                                <label for="remember" class="form-check-label">Remember Me</label>
-                            </div>-->
                             <button name="submit" type="submit" class="btn btn-primary ms-auto">
                                 Login
                             </button>

@@ -19,9 +19,9 @@ if (isset($_POST['submit'])) {
         echo $area;
     }
 ?>
-
-<h1>Frequently Asked Questions (FAQs)</h1>
-<div class="accordion" id="accordionExample">
+<div class="container">
+<h1 class="my-5">Frequently Asked Questions (FAQs)</h1>
+<div class="accordion container" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -118,15 +118,23 @@ if (isset($_POST['submit'])) {
       </div>
     </div>
   </div>   
+</div>
     <section class="h-100">
     <div class="row justify-content-sm-center h-100">
-        <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
             <div class="text-center my-5">
                 </div>
             <div class="card my-5 shadow-lg">
                 <div class="card-body p-5">
                     <h1 class="fs-4 card-title fw-bold mb-4"><h2>Contact us!</h2></h1>
                     <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                        <?php
+                        if (isset($note)) {
+                            foreach ($note as $note) {
+                               
+                                    echo '<div class="alert alert-success" role="alert" onclick="this.remove()">' . $note . '</div>';          
+                            }
+                        }
+                        ?>
                         <div class="mb-3">
                             <label class="mb-2 text-muted" for="name">Name</label>
                             <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
@@ -192,5 +200,8 @@ if (isset($_POST['submit'])) {
                         </div>
                     </form>
                 </div>
+            </div>
+    </div>
                 </section>
+</div>
 <?php require('components/footer.inc.php'); ?>

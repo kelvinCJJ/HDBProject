@@ -20,7 +20,6 @@ require('config.php');
         echo 'error';
     }
 ?>
-<div class="container">
   <h2>Available BTO </h2>
 <p style = "text-align: right"><a href="bto.php"> View More > </a></p>
 <div class="row row-cols-1 row-cols-md-4 g-4">
@@ -31,12 +30,11 @@ require('config.php');
       <div class='card shadow-lg h-100'>
       <img src='".$data[5]."' class='card-img-top' alt=''>
       <div class='card-body'>
-        <h5 class='card-title'>".$data[1]."<a href='/BTO1.php?btoid=".$data[0]."' class='btn  btn-danger float-end'>Read more</a></h5>
+        <h5 class='card-title'>".$data[1]."</h5>
         <p class='card-text'>
         <h6>Available room types:</h6><p>".$data[4].
-        "</p><h6>No. of units available</h6><p>".$data[3]."
-        </p></p>
-        
+        "</p><h6>No. of units available</h6><p>".$data[3]."<a href='/BTO1.php?btoid=".$data[0]."' class='btn  btn-danger float-end'>Read more</a></p>
+        </p>        
       </div>
     </div>
   </div>";
@@ -65,16 +63,16 @@ require('config.php');
     <?php
     foreach($row as $data)
     {
-    echo "<div class='col'>
+     echo "<div class='col'>
     <div class='card shadow-lg h-100'>
       <img src='".$data[9]."' class='card-img-top' alt=''>
       <div class='card-body'>
         <h5 class='card-title'>".$data[1]." (".$data[4].")
-            <a href='/resaledetails.php?resaleid=".$data[0]."' class='btn btn-danger float-end'>Read more</a>
+            
                 </h5>
         <p class='card-text'>".$data[6].
             "<br>S$".$data[2].
-            "<br></p>
+            "<a href='/resaledetails.php?resaleid=".$data[0]."' class='btn btn-danger float-end'>Read more</a></p>
         </div>
     </div>
   </div>";

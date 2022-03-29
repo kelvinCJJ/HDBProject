@@ -1,10 +1,9 @@
 <?php
-session_start();
 
 $username = null;
-if (isset($_SESSION['username']))
-    $username = $_SESSION['username']?$_SESSION['username'] :"test";
-    //header('location:login.php');
+if (isset($_SESSION['username'])){
+    $username = $_SESSION['username'];
+}
 
 if (isset($_GET['logout'])) {
     unset($username);
@@ -14,7 +13,7 @@ if (isset($_GET['logout'])) {
 ?>
 <header class="navbar navbar-expand-lg navbar-light bg-light">
     <nav class="container flex-wrap ">
-        <a class="navbar-brand" href="#"><img src="img/logo.png" width="80" alt="" /></a>
+        <a class="navbar-brand" href="index.php"><img src="img/logo.png" width="80" alt="" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,6 +31,13 @@ if (isset($_GET['logout'])) {
                 <li class="nav-item">
                     <a class="nav-link" href="faqs.php">FAQ</a>
                 </li>
+                <?php
+                if (isset($_SESSION['username'])){
+                    echo "<li class='nav-item'>
+                    <a class='nav-link' href='application.php'>My Applications</a>
+                </li>";
+                }
+                ?>
             </ul>
             <?php
             if (is_null($username)) {
