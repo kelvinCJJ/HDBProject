@@ -1,6 +1,23 @@
 <?php
 require('components/head.inc.php');
 require('components/navbar.inc.php');
+require('config.php');
+
+if (isset($_POST['submit'])) {
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $phone = mysqli_real_escape_string($conn, ($_POST['phone']));
+    $call = mysqli_real_escape_string($conn, ($_POST['call']));
+    $area = mysqli_real_escape_string($conn, ($_POST['area']));
+    $message = mysqli_real_escape_string($conn, ($_POST['message']));
+    
+
+    mysqli_query($conn, "INSERT INTO contactform(Name,Email,Phone,Call,Area,Message) VALUES('$name','$email','$phone','$call','$area','$message')")
+                or die('query error');
+        $note[] = 'Thank you! We will be in contact with you shortly.';
+        echo $area;
+    }
 ?>
 
 <h1>Frequently Asked Questions (FAQs)</h1>
@@ -120,7 +137,7 @@ require('components/navbar.inc.php');
 
                         <div class="mb-3">
                             <label class="mb-2 text-muted" for="email">E-Mail Address</label>
-                            <input id="email" type="email" class="form-control" name="email" value="" required>
+                            <input id="email" type="text" class="form-control" name="email" value="" required>
                             <div class="invalid-feedback">
                                 Email is invalid
                             </div>
@@ -128,13 +145,13 @@ require('components/navbar.inc.php');
 
                         <div class="mb-3">
                             <label class="mb-2 text-muted" for="phone">Contact Number</label>
-                            <input id="phone" type="phone" class="form-control" name="phone" required>
+                            <input id="phone" type="text" class="form-control" name="phone" required>
                             <div class="invalid-feedback">
                                 Contact number is required
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="mb-2 text-muted" for="area">Request for callback</option>
+                            <label class="mb-2 text-muted" for="call">Request for callback</option>
                             <select name="call" id='call'>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
@@ -158,7 +175,7 @@ require('components/navbar.inc.php');
         
                         <div class="mb-3">
                             <label class="mb-2 text-muted" for="message">Message</label>
-                            <input id="message" type="message" class="form-control" name="message" required>
+                            <input id="message" type="text" class="form-control" name="message" required>
                             <div class="invalid-feedback">
                                 Message is required
                             </div>
