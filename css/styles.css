@@ -67,22 +67,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 padding: 0 35%;
 }
 .bto_pic{
-    display:grid;
-    grid-gap:10px;  
-    grid-template-areas: 'satu satu . .' 'satu satu . .';
-    margin:20px 0;
-  
+    display: grid;
 }
-.bto_pic div img{
-    width:100%;
-    display:block; 
-    border-radius:10px;
-}
-.bto_pic1{
-    grid-area: satu;
-}
+
+
 h1{
 	text-align:center;
+}
+h3{
+    text-align:center;
 }
 .extra-info{
     text-align:center;
