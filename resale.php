@@ -17,25 +17,45 @@ $select = mysqli_query($conn, "SELECT * FROM resale")
      $userid = $_SESSION['userid'];
      $selectu = mysqli_query($conn, "SELECT * FROM application WHERE UserID = '$userid' AND ResaleID IS NOT NULL")
             or die($conn->error);
-
+    }
+    
     if (mysqli_num_rows($selectu) > 0) {
         $message[] = 'applied';
     }
-}
+    
+    if (isset($_POST['submit'])) {
+    $uid = mysqli_real_escape_string($conn, $userid);
+    $rid = mysqli_real_escape_string($conn, "1");
+    $date = mysqli_real_escape_string($conn, date("y/m/d"));
+    mysqli_query($conn, "INSERT INTO application(UserId,ResaleId,Date) VALUES('$uid','$rid',NOW())")
+            or die('query error');
+    $message[] = 'Your application was successful';
+    }
 ?>
 <body>
     
 <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
     <?php
-    if(isset($message))
-    {
-        if (strpos($message, "applied")) {
-         echo "<button name='submit' type='submit' class='btn btn-secondary ms-auto' disabled>
-        Applied </button>"; 
-        } else {
-             echo "<button name='submit' type='submit' class='btn btn-primary ms-auto'>Apply Now </button>";}
+    if (isset($message)) {
+         foreach ($message as $message) {
+            if (strpos($message, "succesful")) 
+                echo '<div class="alert alert-success" role="alert" onclick="this.remove()">' . $message . '</div>';
+         }                           
     }
     ?>
+    <input id="userid" type="text" class="form-control" name="userid" value="<?php $userid?>" hidden>
+     <input id="resaleid" type="text" class="form-control" name="resaleid" value="1" hidden>
+        <?php
+        if(isset($message)){
+            if (strpos($message, "applied")) {
+               echo "<button name='submit' type='submit' class='btn btn-primary ms-auto'>
+            Apply Now </button>";
+            } else {
+                echo "<button name='submit' type='submit' class='btn btn-secondary ms-auto' disabled>Applied </button>";
+            }
+        }
+        ?>
+         <button name='submit' type='submit' class='btn btn-primary ms-auto'>Apply Now </button>
 </form>
 
 <div class="container">    
