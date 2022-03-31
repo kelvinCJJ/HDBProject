@@ -33,7 +33,7 @@ require('config.php');
         <h5 class='card-title'>".$data[1]."</h5>
         <p class='card-text'>
         <h6>Available room types:</h6><p>".$data[4].
-        "</p><h6>No. of units available</h6><p>".$data[3]."<a href='/BTO1.php?btoid=".$data[0]."' class='btn  btn-danger float-end'>Read more</a></p>
+        "</p><h6>No. of units available</h6><p>".$data[3]."<a href='/btodetails.php?btoid=".$data[0]."' class='btn  btn-danger float-end'>Read more</a></p>
         </p>        
       </div>
     </div>

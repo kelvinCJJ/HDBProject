@@ -14,13 +14,13 @@ $select = mysqli_query($conn, "SELECT * FROM resale")
     if (isset($_SESSION['userid']))
     {
      $userid = $_SESSION['userid'];
-    }
-    $select = mysqli_query($conn, "SELECT * FROM application WHERE userid = '$userid' AND resaleid = '1'")
+     $selectu = mysqli_query($conn, "SELECT * FROM application WHERE userid = '$userid' AND resaleid = '1'")
             or die($conn->error);
 
-    if (mysqli_num_rows($select) > 0) {
+    if (mysqli_num_rows($selectu) > 0) {
         $message[] = 'applied';
     }
+    
     if (isset($_POST['submit'])) {
 
     $uid = mysqli_real_escape_string($conn, $userid);
@@ -29,6 +29,9 @@ $select = mysqli_query($conn, "SELECT * FROM resale")
     mysqli_query($conn, "INSERT INTO application(UserId,ResaleId,Date) VALUES('$uid','$rid',NOW())")
             or die('query error');
     $message[] = 'Your application was successful';
+    }
+   
+    
     
 }
 ?>
