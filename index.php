@@ -93,7 +93,7 @@ require('config.php');
     </li>
     <li>
         <p><strong>Chee Yong</strong></p>
-    <img src="img/kai-seidler.jpg"/>
+    <img src="img/handsomeguy.jpg"/>
     </li>
     <li>
         <p><strong>Kelvin</strong></p>
