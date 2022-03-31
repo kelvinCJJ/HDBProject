@@ -97,7 +97,7 @@ require('config.php');
     </li>
     <li>
         <p><strong>Kelvin</strong></p>
-    <img src="img/kai-seidler.jpg"/>
+    <img src="https://i.ytimg.com/vi/wBWZ1UWpjDg/maxresdefault.jpg"/>
     </li>
     <li>
         <p><strong>Rachel</strong></p>
