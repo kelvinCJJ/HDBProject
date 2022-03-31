@@ -58,8 +58,7 @@ $select1 = mysqli_query($conn, "SELECT * FROM bto WHERE BTOId = $btoid ")
     <hr class='line'>
         <h3>
             Description: " . $data1[6] . "
-        </h3> 
-}"
+        </h3>"
             ;
         }
         ?>
