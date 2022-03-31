@@ -30,9 +30,6 @@ $select = mysqli_query($conn, "SELECT * FROM resale")
             or die('query error');
     $message[] = 'Your application was successful';
     }
-   
-    
-    
 }
 ?>
 <div class="container">
@@ -47,7 +44,6 @@ $select = mysqli_query($conn, "SELECT * FROM resale")
                         ?>
                         <input id="userid" type="text" class="form-control" name="userid" value="<?php $userid?>" hidden>
                          <input id="resaleid" type="text" class="form-control" name="resaleid" value="1" hidden>
-                         
                             <?php
                             if(isset($message)){
                                 if (strpos($message, "applied")) {
@@ -57,11 +53,8 @@ $select = mysqli_query($conn, "SELECT * FROM resale")
                                     echo "<button name='submit' type='submit' class='btn btn-secondary ms-auto' disabled>
                                 Applied </button>";
                                 }
-                                
                             }
                             ?>
-                         <button name='submit' type='submit' class='btn btn-primary ms-auto'>
-                                Apply Now </button>
     </form>
 <h1>Resale flats</h1>
 <div class="row row-cols-1 row-cols-md-3 g-4">
