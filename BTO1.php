@@ -2,7 +2,6 @@
 require('components/head.inc.php');
 require('components/navbar.inc.php');
 require('config.php');
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,14 +22,13 @@ require('config.php');
     <div class ="housetitle">
         <h1>Fernvale</h1>
         <div class="row">
-            <div>
-               
-            </div>
-                
         </div>
     </div> 
+            
     <div class ="bto_pic">
         
+        <div class="row">
+            <div class="col">
          <?php
     $btoid= $_GET["btoid"];
             $select = mysqli_query($conn, "SELECT * FROM btoimages WHERE BTOId = btoid")
@@ -41,14 +39,19 @@ require('config.php');
     } else {
         echo 'error';
     }
+    
     foreach($row as $data)
     {
     echo"
+        
         <img src='".$data[1]."' ></div>
         
         ";
     } ?>
-   
+            </div>
+        </div>
+    </div>
+             
     </div>
             
 <?php      
@@ -78,9 +81,7 @@ $select = mysqli_query($conn, "SELECT* FROM bto WHERE BTOId = btoid ")
             Description: ".$data[6]."
             
         </h3> 
-         
-    
-}"
+         "
     ;}
     ?>
     

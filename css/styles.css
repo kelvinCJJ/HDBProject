@@ -62,13 +62,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
   font-weight: normal;
   margin: 0;
 }
-/*House detail*/
-.housetitle{
-padding: 0 35%;
+
+.bto_pic{
+   
+    width:1200px;
+    display:inline-grid;
+   grid-template-columns: 700px auto;
+    justify-content: center;
+    
 }
-/*.bto_pic{
-    display: grid;
-}*/
+
+
 
 
 h1{
