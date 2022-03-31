@@ -31,7 +31,7 @@ if (isset($_SESSION['userid'])){
     
 ?>
 
-<form method="POST" action="resaledetails.php?resaleid=<?php echo$resaleid;?>"  autocomplete="off">
+<h1><form method="POST" action="resaledetails.php?resaleid=<?php echo$resaleid;?>"  autocomplete="off">
         <?php
         if(isset($message)){
             if (str_contains($message[0], "applied")) {
@@ -44,7 +44,7 @@ if (isset($_SESSION['userid'])){
             }
         }
         ?>
-</form>
+</form></h1>
     
 <?php
     $resaleid = $_GET["resaleid"];
