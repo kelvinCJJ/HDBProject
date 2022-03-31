@@ -34,31 +34,17 @@ if (isset($message)) {
     echo '<div class="alert alert-success" role="alert" onclick="this.remove()">' . $message . '</div>';}}
  ?>
 
-<!DOCTYPE html>
-<html>
-<body>
-    
 <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
-    <?php
-    if (isset($message)) {
-         foreach ($message as $message) {
-            if (strpos($message, "succesful")) 
-                echo '<div class="alert alert-success" role="alert" onclick="this.remove()">' . $message . '</div>';
-         }                           
-    }
-    ?>
-    
         <?php
         if(isset($message)){
             if (strpos($message, "applied")) {
+                echo "<button name='submit' type='submit' class='btn btn-secondary ms-auto' disabled>Applied </button>";
+            } else {
                echo "<button name='submit' type='submit' class='btn btn-primary ms-auto'>
             Apply Now </button>";
-            } else {
-                echo "<button name='submit' type='submit' class='btn btn-secondary ms-auto' disabled>Applied </button>";
             }
         }
         ?>
-         <button name='submit' type='submit' class='btn btn-primary ms-auto'>Apply Now </button>
 </form>
     
 <?php

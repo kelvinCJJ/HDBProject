@@ -3,7 +3,7 @@ require('components/head.inc.php');
 require('components/navbar.inc.php');
 require('config.php');
 
-$select = mysqli_query($conn, "SELECT * FROM resale")
+    $select = mysqli_query($conn, "SELECT * FROM resale")
             or die($conn->error);
 
     if (mysqli_num_rows($select) > 0) {
@@ -47,15 +47,15 @@ $select = mysqli_query($conn, "SELECT * FROM resale")
      <input id="resaleid" type="text" class="form-control" name="resaleid" value="1" hidden>
         <?php
         if(isset($message)){
-            if (strpos($message, "applied")) {
-               echo "<button name='submit' type='submit' class='btn btn-primary ms-auto'>
-            Apply Now </button>";
+            if (strpos($message, "applied")) 
+               { echo "<button name='submit' type='submit' class='btn btn-secondary ms-auto' disabled>Applied </button>";
+          
             } else {
-                echo "<button name='submit' type='submit' class='btn btn-secondary ms-auto' disabled>Applied </button>";
+               echo "<button name='submit' type='submit' class='btn btn-primary ms-auto'>Apply Now </button>"; 
             }
         }
         ?>
-         <button name='submit' type='submit' class='btn btn-primary ms-auto'>Apply Now </button>
+     <!-- <button name='submit' type='submit' class='btn btn-primary ms-auto'>Apply Now </button> -->
 </form>
 
 <div class="container">    
