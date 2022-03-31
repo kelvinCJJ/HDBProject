@@ -85,7 +85,7 @@ require('config.php');
 <ul class="image-list-small">
     <li>
         <p><strong>Bevan</strong></p>
-    <img src="img/kai-seidler.jpg"/>
+    <img src="https://static.wikia.nocookie.net/disenchantment/images/5/50/Zog.jpg"/>
     </li>
     <li>
         <p><strong>Clifford</strong></p>
