@@ -3,45 +3,44 @@ require('components/head.inc.php');
 require('components/navbar.inc.php');
 require('config.php');
 
-    $resaleid = $_GET["resaleid"];
-    
-    if (isset($_SESSION['userid'])){
+$resaleid = $_GET["resaleid"];
+
+if (isset($_SESSION['userid'])){
      $userid = $_SESSION['userid'];
-    
-    
+   
     $select = mysqli_query($conn, "SELECT * FROM application WHERE userid = '$userid' AND resaleid = '$resaleid'")
             or die($conn->error);
     
     if (mysqli_num_rows($select) > 0) {
         $message[] = 'applied';
     }
+    else
+    {
+        $message[] = "applicable";
+    }
     
     if (isset($_POST['submit'])) {
     $uid = mysqli_real_escape_string($conn, $userid);
     $rid = mysqli_real_escape_string($conn, $resaleid);
-    $date = mysqli_real_escape_string($conn, date("d/m/y"));
-    mysqli_query($conn, "INSERT INTO application(UserId,ResaleId,Date) VALUES('$uid','$rid','$date')")
+    $date = mysqli_real_escape_string($conn, date("y/m/d"));
+    mysqli_query($conn, "INSERT INTO application(UserId,ResaleId,Date) VALUES('$uid','$rid',NOW())")
             or die('query error');
-    $message[] = 'Your application was successful';
+    header('location:application.php');
     }
-    }
+}
+    
 ?>
 
-<?php
-if (isset($message)) {
-    foreach ($message as $message) {
-    if (strpos($message, "succesful")) 
-    echo '<div class="alert alert-success" role="alert" onclick="this.remove()">' . $message . '</div>';}}
- ?>
-
-<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+<form method="POST" action="resaledetails.php?resaleid=<?php echo$resaleid;?>"  autocomplete="off">
         <?php
         if(isset($message)){
-            if (strpos($message, "applied")) {
+            if (str_contains($message[0], "applied")) {
                 echo "<button name='submit' type='submit' class='btn btn-secondary ms-auto' disabled>Applied </button>";
+                                
             } else {
-               echo "<button name='submit' type='submit' class='btn btn-primary ms-auto'>
+                echo "<button name='submit'  type='submit' class='btn btn-primary ms-auto'>
             Apply Now </button>";
+               
             }
         }
         ?>
@@ -79,7 +78,8 @@ $select1 = mysqli_query($conn, "SELECT * FROM resale WHERE ResaleId = $resaleid 
                 }
                 foreach ($row as $data) {
                     echo"<img src='" . $data[1] . "' >   ";
-                }?>
+                }
+                ?>
             </div> 
         </div>    
         </div>
@@ -96,4 +96,3 @@ $select1 = mysqli_query($conn, "SELECT * FROM resale WHERE ResaleId = $resaleid 
 
 <script src="js/bootstrap.min.js"></script>	
 <?php require('components/footer.inc.php'); ?>
-</html>
