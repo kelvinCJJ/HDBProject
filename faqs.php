@@ -37,12 +37,12 @@ if (isset($_POST['submit'])) {
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Will other applicants be able to see the units on my watchlist?
+        What documents do I need when applying for a flat?
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>No.
+        <strong>Identity card, passport, birth certificates of children, marriage/divorce certificate (if applicable), death certificate (if applicable) and income documents.
       </div>
     </div>
   </div>
@@ -85,12 +85,12 @@ if (isset($_POST['submit'])) {
  <div class="accordion-item">
     <h2 class="accordion-header" id="headingSix">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-        How would I know when a flat on my watchlist has been taken?
+        Where can I find out more about the nearest amenities?
       </button>
     </h2>
     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>You will be notified when a flat on your watchlist has been taken up. You may change the frequency of receiving these notifications at the Watchlist facility page by using the “Notification Settings”.
+        <strong>Click on "Read more" where the details will be listed and you can view data such as nearby supermarkets, school, etc.
       </div>
     </div>
   </div>
@@ -109,12 +109,12 @@ if (isset($_POST['submit'])) {
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingEight">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-        If I put a unit on my watchlist, does that mean it has been reserved for me?
+        What do I do if I have more questions regarding the flats?
       </button>
     </h2>
     <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>No. The watchlist facility is only to facilitate your monitoring. Whether you can book a particular unit will depend on the availability of the unit and ethnic quota when your selection appointment is due.
+        <strong>There is a contact form below where you can submit your questions and we will get back to you soon!
       </div>
     </div>
   </div>   
