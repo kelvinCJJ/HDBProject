@@ -31,20 +31,7 @@ if (isset($_SESSION['userid'])){
     
 ?>
 
-<h1><form method="POST" action="resaledetails.php?resaleid=<?php echo$resaleid;?>"  autocomplete="off">
-        <?php
-        if(isset($message)){
-            if (str_contains($message[0], "applied")) {
-                echo "<button name='submit' type='submit' class='btn btn-secondary ms-auto' disabled>Applied </button>";
-                                
-            } else {
-                echo "<button name='submit'  type='submit' class='btn btn-primary ms-auto'>
-            Apply Now </button>";
-               
-            }
-        }
-        ?>
-</form></h1>
+
     
 <?php
     $resaleid = $_GET["resaleid"];
@@ -86,12 +73,28 @@ $select1 = mysqli_query($conn, "SELECT * FROM resale WHERE ResaleId = $resaleid 
         <?php
         echo" <div class='extra-info'>
         <h1> <i class='fa-solid fa-house-user'></i> Address: " . $data1[6] . "</h1>
-        <h2> <i class='fa-solid fa-bed'></i> Room Type: " . $data1[4] . "</h2>
+        <h2> <i class='fa-solid fa-bed'></i> Unit on Floor: " . $data1[7] . " <i class='fa-solid fa-bed'></i> Size of Unit: " . $data1[5] . "sqm</h2> 
+        <h2> <i class='fa-solid fa-bed'></i> Unit Price: $" . $data1[2] . "</h2>
+        <h2> <i class='fa-solid fa-bed'></i> Unit Type: " . $data1[4] . " <i class='fa-solid fa-bed'></i> Unit Remaing Lease: " . $data1[8] . " </h2>    
         </div>
         <hr class='line'>
         <h3>Description: " . $data1[11] . "</h3>";}
         ?>
-    </div>
+  
+    <h1><form method="POST" action="resaledetails.php?resaleid=<?php echo$resaleid;?>"  autocomplete="off">
+        <?php
+        if(isset($message)){
+            if (str_contains($message[0], "applied")) {
+                echo "<button name='submit' type='submit' class='btn btn-secondary ms-auto' disabled>Applied </button>";
+                                
+            } else {
+                echo "<button name='submit'  type='submit' class='btn btn-primary ms-auto'>
+            Apply Now </button>";
+               
+            }
+        }
+        ?>
+    </form></h1>
 </body>
 
 <script src="js/bootstrap.min.js"></script>	
