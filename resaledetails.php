@@ -72,10 +72,10 @@ $select1 = mysqli_query($conn, "SELECT * FROM resale WHERE ResaleId = $resaleid 
         </div>
         <?php
         echo" <div class='extra-info'>
-        <h1> <i class='fa-solid fa-house-user'></i> Address: " . $data1[6] . "</h1>
-        <h2> <i class='fa-solid fa-bed'></i> Unit on Floor: " . $data1[7] . " <i class='fa-solid fa-bed'></i> Size of Unit: " . $data1[5] . "sqm</h2> 
-        <h2> <i class='fa-solid fa-bed'></i> Unit Price: $" . $data1[2] . "</h2>
-        <h2> <i class='fa-solid fa-bed'></i> Unit Type: " . $data1[4] . " <i class='fa-solid fa-bed'></i> Unit Remaing Lease: " . $data1[8] . " </h2>    
+        <h1> <i class='fa-solid fa-building'></i> Address: " . $data1[6] . "</h1>
+        <h2> <i class='fa-solid fa-arrow-right-to-city'></i> Unit on Floor: " . $data1[7] . " <i class='fa-solid fa-maximize'></i> Size of Unit: " . $data1[5] . "sqm</h2> 
+        <h2> <i class='fa-solid fa-money-bill-1-wave'></i> Unit Price: $" . $data1[2] . "</h2>
+        <h2> <i class='fa-solid fa-people-roof'></i> Unit Type: " . $data1[4] . " <i class='fa-solid fa-calendar-days'></i> Unit Remaing Lease: " . $data1[8] . " </h2>    
         </div>
         <hr class='line'>
         <h3>Description: " . $data1[11] . "</h3>";}
