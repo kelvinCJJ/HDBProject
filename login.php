@@ -73,25 +73,6 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 </section>
-<!--<script>
-    (function () {
-
-        var forms = document.querySelectorAll('.needs-validation')
-
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-    })()
-</script>-->
 <script src="js/bootstrap.min.js"></script>
 </body>
 <?php require('components/footer.inc.php'); ?>

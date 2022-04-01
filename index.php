@@ -11,7 +11,7 @@ require('config.php');
 <div class ="container">
 <?php
 
- $select = mysqli_query($conn, "SELECT * FROM bto  LIMIT 4")
+ $select = mysqli_query($conn, "SELECT * FROM bto LIMIT 4")
             or die($conn->error);
 
     if (mysqli_num_rows($select) > 0) {

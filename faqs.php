@@ -16,7 +16,6 @@ if (isset($_POST['submit'])) {
     mysqli_query($conn, "INSERT INTO contactform(Name,Email,Phone,Request,Area,Message) VALUES('$name','$email','$phone','$call','$area','$message')")
                 or die('query error');
         $note[] = 'Thank you! We will be in contact with you shortly.';
-        echo $area;
     }
 ?>
 <div class="container">

@@ -45,7 +45,6 @@ if (isset($_POST['submit'])) {
                             }
                         }
                         ?>
-
                         <div class="mb-3">
                             <label class="mb-2 text-muted" for="name">Name</label>
                             <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
@@ -53,7 +52,6 @@ if (isset($_POST['submit'])) {
                                 Name is required	
                             </div>
                         </div>
-
                         <div class="mb-3">
                             <label class="mb-2 text-muted" for="email">E-Mail Address</label>
                             <input id="email" type="email" class="form-control" name="email" value="" required>
